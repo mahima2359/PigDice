@@ -58,7 +58,7 @@ rollDice.addEventListener('click', function () {
     //Display dice image
     diceImg.classList.remove('hidden');
     //Add random dice img to img src
-    diceImg.src = `images/dice-${dice}.png`;
+    diceImg.src = `./images/dice-${dice}.png`;
     //Check whether it's 1 and change player
     if (dice !== 1) {
       //Keep the current score to the current active player
@@ -92,6 +92,7 @@ holdDice.addEventListener('click', function () {
         .querySelector(`.player--${activePlayer}`)
         .classList.remove('player--active');
       diceImg.classList.add('hidden');
+      diceImg.src = './images/dice-1.png';
     } else {
       //switch player
       playerSwitching();
